@@ -1,0 +1,17 @@
+<template name="homePage">
+	<body>
+		<main>
+			<h1> Code Monkey Island </h1>
+
+			<h2> Kies een gameroom.</h2>
+
+			<ul class="gamerooms">
+				{{#each rooms}}
+					<li><a href="/choose">{{title}}</a></li>
+				{{/each}}
+			</ul>
+
+		</main>
+	</body>
+
+</template>

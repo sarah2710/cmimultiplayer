@@ -1,0 +1,48 @@
+<template name="gamePage">
+	 <body>
+       <main>
+            <button> <a href="/"> TERUG </a></button>
+            <h1>{{title}}</h1>
+            <section class="board">
+                <img src="/images/teleporter.gif" class="teleporter start" alt="teleporter" />
+                {{board}}
+                <ul class="pawns">
+                    <li><img src="/images/chimp.png" alt="speler 1"/></li>
+                    <li><img src="/images/gorilla.png" alt="speler 2"/></li>
+                    <li><img src="/images/oranutang.png" alt="speler 3"/></li>
+                </ul>
+                <img src="/images/teleporter.gif" class="teleporter finish" alt="teleporter"/>
+                
+                <ul class="fields">
+                    {{#each fields}}
+                        <li class="{{this}}"></li>
+                    {{/each}}
+                </ul>
+            </section>
+
+            <aside>
+                <figure id="dice">    
+                    <img src="/images/one.png" alt="dobbelsteen" />
+                </figure>
+
+                <section class="feedback">
+                    <h1>Feedback:</h1>
+                    <p>Gooi de dobbelsteen.</p>
+                </section>
+
+                <section class="rules">
+                    <h1>Regels:</h1>
+                    <dl>
+                        <dt class="forward">Groen veld</dt>
+                        <dd>= 1 stap vooruit</dd>
+                        <dt class="back">Rood veld</dt>
+                        <dd>= 2 stappen achteruit</dd>
+                        <dt class="neutral">Neutraal veld</dt>
+                        <dd>= geen invloed</dd>
+                    </dl>
+                </section>
+            </aside>    
+        </main>
+    </body>
+ 
+</template>

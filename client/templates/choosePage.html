@@ -1,0 +1,18 @@
+<template name="choosePage">
+	<body>
+		<main>
+			<h1> Code Monkey Island </h1>
+
+			<h2> Kies een pion.</h2>
+
+			<ul class="choose">
+				{{#each pawns}}
+					<li><a href="/game/{{_id}}">{{player}}</a></li>
+				{{/each}}
+			</ul>
+
+
+		</main>
+	</body>
+
+</template>
